@@ -25,10 +25,11 @@ namespace ProyectoFinal.Clases
 
         public List<Factura> Facturas { get; set;}
 
-       
+
+     
         public Cliente()
         {
-            // Constructor requerido por Entity Framework
+            Facturas = new List<Factura>();
         }
 
         public Cliente(string razonSocial, string domicilio, string cuilCuit)
@@ -36,6 +37,7 @@ namespace ProyectoFinal.Clases
             RazonSocial = razonSocial;
             Domicilio = domicilio;
             CuilCuit = cuilCuit;
+            Facturas = new List<Factura>();
         }
     }
 }

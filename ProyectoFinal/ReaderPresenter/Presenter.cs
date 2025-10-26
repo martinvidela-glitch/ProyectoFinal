@@ -14,15 +14,6 @@ namespace ProyectoFinal.ReaderPresenter
             Console.WriteLine(mensaje);
         }
 
-        public void PedirTipoFact()
-        {
-            Console.WriteLine("Ingrese el tipo de factura A, B o C");
-        }
-
-        public void PedirDescrItem()
-        {
-            Console.WriteLine("Ingrese la descripcion del producto.");
-        }
 
         public void AsignarCantidad()
         {
@@ -33,18 +24,7 @@ namespace ProyectoFinal.ReaderPresenter
         {
             Console.WriteLine("Ingrese el precio del producto");
         }
-        public void PedirRazonSocial()
-        {
-            Console.WriteLine("Ingrese la razon social del cliente");
-        }
-        public void PedirDomicilio()
-        {
-            Console.WriteLine("Ingrese el domicilio del cliente");
-        }
-        public void PedirCuilCuit()
-        {
-            Console.WriteLine("Ingrese el CUIL/CUIT del cliente");
-        }
+
         public void PrimerMenu()
         {
             Console.WriteLine("1- Gestionar clientes.");
@@ -65,6 +45,13 @@ namespace ProyectoFinal.ReaderPresenter
             Console.WriteLine("2- Consultar factura");
             Console.WriteLine("3- Volver al inicio");
         }
-        
+        public void MenuModificar()
+        {
+            Console.WriteLine("1-Modificar razon social");
+            Console.WriteLine("2-Modificar domicilio");
+            Console.WriteLine("3-Modificar cuil/cuit");
+            Console.WriteLine("4-Volver al menu principal");
+            Console.WriteLine("5-Volver al menu clientes");
+        }
     }
 }

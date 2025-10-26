@@ -15,11 +15,11 @@ namespace ProyectoFinal.Clases
         public int ID { get; set; }
         [Required]
         [MaxLength (100)]
-        public string Descripcion { get; private set; }
+        public string Descripcion { get;  set; }
         [Required]
-        public int Cantidad { get; private set; }
+        public int Cantidad { get;  set; }
         [Required]
-        public float Importe { get; private set; }
+        public float Importe { get;  set; }
 
         public Factura Factura { get; set; }
        

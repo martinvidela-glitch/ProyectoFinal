@@ -16,18 +16,18 @@ namespace ProyectoFinal.Clases
         public int ID {  get; set; }
         [Required]
         [MaxLength (1)]
-        public char Tipo { get; private set; }
+        public char Tipo { get;  set; }
         [Required]
         [MaxLength (15)]
         public string Numero { get; private set; }
         [Required]
         public DateOnly Fecha { get; private set; }
         [Required]
-        public long ImporteTotal { get; private set; }
+        public float ImporteTotal { get;  set; }
 
-        public Cliente Cliente { get; private set; }
+        public Cliente Cliente { get;  set; }
 
-        public List<Item> Items { get; private set; }
+        public List<Item> Items { get;  set; }
 
         Reader readerFac = new Reader ();
         public string AsignarNumero()
@@ -53,8 +53,11 @@ namespace ProyectoFinal.Clases
         }
         public Factura()
         {
-            // Constructor requerido por Entity Framework
+            Numero = AsignarNumero();
+            Fecha = AsignarFecha();
+            Items = new List<Item>();
         }
+        
 
         public Factura(char tipo)
         {
